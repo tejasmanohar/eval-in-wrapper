@@ -18,6 +18,6 @@ helpers do
 end
 
 post '/exec' do
-  output = eval_in code, params[:language]
+  output = eval_in params[:code], params[:language]
   { :stdout => output }
 end
